@@ -11,7 +11,7 @@ END;
 
 ***********
 
-    CREATE PROCEDURE CalculerSalaireMoyen(IN CodeFonction INT)
+    CREATE PROCEDURE CalculerSalaireMoyen(  CodeFonction INT)
     BEGIN
     SELECT AVG(Salaire) AS SalaireMoyen
     FROM Employés
@@ -32,7 +32,7 @@ HAVING COUNT(*) > 10;
 
 
 
-    CREATE PROCEDURE NewLocation(IN NumClient INT, IN NumExemplaire INT, IN DateLocation DATE)
+    CREATE PROCEDURE NewLocation(  NumClient INT,   NumExemplaire INT,   DateLocation DATE)
     BEGIN
     INSERT INTO Locations (NumClient, NumExemplaire, DateLocation, DateRetour)
     VALUES (NumClient, NumExemplaire, DateLocation, NULL);
